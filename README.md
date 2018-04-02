@@ -30,7 +30,7 @@ Vue.use(VueOffline)
 <template>
   <div id="app">
     <div v-online>This part is visible only when user is online</div>
-    <div v-offline>This part is visible only if user if offline</div>
+    <div v-offline>This part is visible only if user is offline</div>
     <div> {{ onlineState }} </div>
   </div>
 </template>
