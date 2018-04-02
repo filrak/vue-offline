@@ -2,8 +2,12 @@ module.exports = {
     install (Vue) {
         const onlineOnlyDirective = {
             bind: function (el) {
+                let prevDisplay = el.style.display;
+
                 if (window) {
-                    let prevDisplay = el.style.display;
+                    if (!navigator.onLine) {
+                        el.style.display = 'none'
+                    }
                     window.addEventListener('offline',  () => {
                         prevDisplay = el.style.display
                         el.style.display = 'none'
