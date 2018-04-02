@@ -18,7 +18,8 @@ module.exports = {
 
         const offlineOnlyDirective = {
             bind: function (el) {
-                
+                prevDisplay = el.style.display
+
                 if (window) {
                     if (navigator.onLine) {
                         el.style.display = 'none'
