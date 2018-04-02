@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     install (Vue) {
         const onlineOnlyDirective = {
             inserted: function (el) {
