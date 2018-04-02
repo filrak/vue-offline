@@ -2,7 +2,7 @@
 
 # Offline/online states for Vue applications
 
-This plugins notifies your application when online/offline status changes and allows to conditionally display components depending on the network status.
+This plugins notifies your application when online/offline status changes and allows to conditionally display components depending on the network status. Supports SSR.
 
 # Installation
 

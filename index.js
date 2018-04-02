@@ -1,7 +1,7 @@
 module.exports = {
     install (Vue) {
         const onlineOnlyDirective = {
-            inserted: function (el) {
+            bind: function (el) {
                 if (window) {
                     let prevDisplay = el.style.display;
                     window.addEventListener('offline',  () => {
@@ -17,9 +17,9 @@ module.exports = {
         }
 
         const offlineOnlyDirective = {
-            inserted: function (el) {
+            bind: function (el) {
+                
                 if (window) {
-                    let prevDisplay = el.style.display;
                     if (navigator.onLine) {
                         el.style.display = 'none'
                     }
@@ -35,7 +35,7 @@ module.exports = {
         }
 
         const offlineHooksMixin = {
-            created () {
+            mounted () {
                 if (window) {
                     window.addEventListener('online',  () => {
                         this.$emit('online')

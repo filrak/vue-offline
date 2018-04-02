@@ -1,6 +1,6 @@
 {
   "name": "vue-offline",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Online/Offline events and directives for vue application",
   "main": "index.js",
   "scripts": {
