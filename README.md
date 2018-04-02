@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Offline/online states for Vue applications
 
 This plugins notifies your application when online/offline status changes and allows to conditionally display components depending on the network status.
