@@ -19,8 +19,8 @@ Vue.use(VueOffline)
 
 # Features 
 
-* `v-online` directive - shows component only when online
-* `v-offline` directive - shows component only when offline
+* `OnlineOnly` data property available for each component - shows component only when online
+* `OfflineOnly` data property available for each component - shows component only when offline
 * `online` event - available in every component, emitted when user changes from offline to online
 * `offline` event - available in every component, emitted when user changes from online to offline
 
@@ -29,8 +29,8 @@ Vue.use(VueOffline)
 ````html
 <template>
   <div id="app">
-    <div v-online>This part is visible only when user is online</div>
-    <div v-offline>This part is visible only if user is offline</div>
+    <div v-show="OnlineOnly">This part is visible only when user is online</div>
+    <div v-offline="OfflineOnly">This part is visible only if user is offline</div>
     <div> {{ onlineState }} </div>
   </div>
 </template>

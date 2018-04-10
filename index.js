@@ -1,5 +1,7 @@
 module.exports = {
     install (Vue) {
+        
+        // Legacy, doesn't work as intended
         const onlineOnlyDirective = {
             bind: function (el) {
                 let prevDisplay = el.style.display;
@@ -20,8 +22,10 @@ module.exports = {
             }
         }
 
+        // Legacy, doesn't work as intended
         const offlineOnlyDirective = {
             bind: function (el) {
+                console.log('binded')
                 prevDisplay = el.style.display
 
                 if (window) {
@@ -40,13 +44,28 @@ module.exports = {
         }
 
         const offlineHooksMixin = {
+            data () {
+                return {
+                    OfflineOnly: false,
+                    OnlineOnly: false
+                }
+            },
             mounted () {
                 if (window) {
+                    if (navigator.onLine) {
+                        this.OnlineOnly = true
+                    } else {
+                        this.OfflineOnly = true
+                    }
                     window.addEventListener('online',  () => {
                         this.$emit('online')
+                        this.OnlineOnly = true
+                        this.OfflineOnly = false
                     })
                     window.addEventListener('offline',  () => {
                         this.$emit('offline')
+                        this.OfflineOnly = true
+                        this.OnlineOnly = false
                     })
                 }
             }
