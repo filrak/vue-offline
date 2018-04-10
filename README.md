@@ -19,8 +19,8 @@ Vue.use(VueOffline)
 
 # Features 
 
-* `OnlineOnly` data property available for each component - shows component only when online
-* `OfflineOnly` data property available for each component - shows component only when offline
+* `OnlineOnly` data property available for each component - `true` only when online
+* `OfflineOnly` data property available for each component - `true` only when offline
 * `online` event - available in every component, emitted when user changes from offline to online
 * `offline` event - available in every component, emitted when user changes from online to offline
 
