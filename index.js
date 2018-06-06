@@ -1,5 +1,5 @@
 module.exports = {
-    install (Vue) {
+    install (Vue, options) {
         
         // Legacy, doesn't work as intended
         const onlineOnlyDirective = {
@@ -43,6 +43,10 @@ module.exports = {
             }
         }
 
+
+
+
+
         const offlineHooksMixin = {
             data () {
                 return {
@@ -57,15 +61,25 @@ module.exports = {
                     } else {
                         this.OfflineOnly = true
                     }
-                    window.addEventListener('online',  () => {
+                    
+                    const onlineHandler = () => {
                         this.$emit('online')
                         this.OnlineOnly = true
                         this.OfflineOnly = false
-                    })
-                    window.addEventListener('offline',  () => {
+                    }
+
+                    const offlineHandler = () => {
                         this.$emit('offline')
                         this.OfflineOnly = true
                         this.OnlineOnly = false
+                    }
+
+                    window.addEventListener('online',  onlineHandler)
+                    window.addEventListener('offline',  offlineHandler)
+
+                    this.$once('hook:desktroyed', () => {
+                        window.removeEventListener('online', onlineHandler)
+                        window.removeEventListener('offline', offlineHandler)
                     })
                 }
             }

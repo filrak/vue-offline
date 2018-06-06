@@ -6,9 +6,13 @@ This plugins notifies your application when online/offline status changes and al
 
 # Installation
 
-````
+ ````
 npm install vue-offline --save
 ````
+
+There are two ways to use this plugin:
+
+<b>Global</b> - if you register the plugin globally all features will be immediately avvailable in all of your components
 
 ````js
 import Vue from 'vue'
@@ -16,6 +20,18 @@ import VueOffline from 'vue-offline'
 
 Vue.use(VueOffline)
 ````
+ <b>Local for specific components </b>- if you need online/offline features only in specific components you can inject them as a mixins. This approach could save a little bit of performance.
+
+Add vue-offline mixin inside components that you want to have features listed below:
+````js
+import VueOfflineMixin from 'vue-offline/mixin'
+
+export default {
+  mixins: [VueOfflineMixin]
+}
+
+````
+
 
 # Features 
 
