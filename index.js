@@ -77,14 +77,14 @@ module.exports = {
                     window.addEventListener('online',  onlineHandler)
                     window.addEventListener('offline',  offlineHandler)
 
-                    this.$once('hook:desktroyed', () => {
+                    this.$once('hook:beforeDestroy', () => {
                         window.removeEventListener('online', onlineHandler)
                         window.removeEventListener('offline', offlineHandler)
                     })
                 }
             }
         }
-        
+
         Vue.directive('online', onlineOnlyDirective)
         Vue.directive('offline', offlineOnlyDirective)
         Vue.mixin(offlineHooksMixin)
