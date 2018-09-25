@@ -69,3 +69,5 @@ export default {
 }
 </script>
 ````
+
+Note: I'm using plain es6 modules
