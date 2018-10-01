@@ -71,3 +71,6 @@ export default {
 ````
 
 Note: I'm using plain es6 modules
+
+# Roadmap
+- offline storage with service worker generation
