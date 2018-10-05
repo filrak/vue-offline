@@ -70,7 +70,7 @@ export default {
 </script>
 ````
 
-Note: I'm using plain es6 modules
+Note: I'm using plain ES6 modules and arrow functions. If you want to use this library for older browsers (which are probably not supporting Service Workers so it might be useless) please transpile it.
 
 # Roadmap
 - offline storage with service worker generation
