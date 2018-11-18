@@ -2,10 +2,13 @@
 
 This library allows you to enhance offline capabilities of your Vue.js application. It's especially useful when you're building offline-first Progressive Web Apps or just want to inform your users that they lost internet connection. 
 
+**TL;DR** Adds `isOnline` `isOffline` data properties, `online`, `offline` events via global mixin and enables offline storage via `Vue.$offlineStorage` based on Local Storage
+
 - [Installation](https://github.com/filrak/vue-offline#installation)
-- [Capabilities]()
-    - [VueOfflineMixin]()
-    - [VueOfflinestorage]()
+- [Capabilities](https://github.com/filrak/vue-offline#capabilities)
+    - [VueOfflineMixin](https://github.com/filrak/vue-offline#vueofflinemixin)
+    - [VueOfflinestorage](https://github.com/filrak/vue-offline#vueofflinestorage)
+
 ## Installation
 To install this package as a plugin just type:
 ````
