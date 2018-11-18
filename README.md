@@ -91,7 +91,7 @@ export default {
                 this.appData = userData
                 this.$offlineStorage.set('user', userData)
             } else {
-                this.appData = this.$offlineStorage.get('user)
+                this.appData = this.$offlineStorage.get('user`)
             }
         }
     }
@@ -125,7 +125,7 @@ export default {
                 this.appData = userData
                 VueOfflineStorage.set('user', userData)
             } else {
-                this.appData = VueOfflineStorage.get('user)
+                this.appData = VueOfflineStorage.get('user`)
             }
         }
     }
