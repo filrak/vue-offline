@@ -18,7 +18,9 @@ Vue.use(VueOffline)
 ## Capabilities
 This plugin contains two features:
 
-1. **VueOfflineMixin** - global mixin that'll add following properties to every component in your application:
+### VueOfflineMixin
+Global mixin that'll add following properties to every component in your application:
+
 - `isOnline` & `isOffline` data properties
 ````html
 <template>
@@ -47,6 +49,9 @@ export default {
     }
 }
 ````
+
+### Additional configuration
+
 By default `VueOfflineMixin` is injected into every component which may be a cause of potential performance problems. You can disable this behavior by setting plugin option `mixin` to `false`. 
 ````js
 Vue.use(VueOffline, {
@@ -73,7 +78,8 @@ export default {
     }
 }
 ````
-2. **VueOfflineStorage** - Offline storaga that uses [local storage][https://developer.mozilla.org/pl/docs/Web/API/Window/localStorage] to persist data for offline usage and caching. It's a perfect choice for offline-first PWA. You can use it as a fallback for failed network requests or a local cache. 
+### VueOfflineStorage 
+ Offline storaga that uses [local storage][https://developer.mozilla.org/pl/docs/Web/API/Window/localStorage] to persist data for offline usage and caching. It's a perfect choice for offline-first PWA. You can use it as a fallback for failed network requests or a local cache. 
 
 The storage object has following properties: 
 - `set(key, value)` - puts (or updates if already exists) `value` into storage under key `key`.
@@ -104,6 +110,7 @@ import { VueOfflineStorage } from 'vue-offline'
 const cachedData = VueofflineStorage.get('cached-data')
 
 ````
+### Additional configuration
 
 By default `VueofflineStorage` reference is included into every Vue component. You can disable this behavior by setting plugin option `storage` to `false`. 
 ````js
