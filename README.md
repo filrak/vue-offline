@@ -7,7 +7,7 @@ This library allows you to enhance offline capabilities of your Vue.js applicati
 - [Installation](https://github.com/filrak/vue-offline#installation)
 - [Capabilities](https://github.com/filrak/vue-offline#capabilities)
     - [VueOfflineMixin](https://github.com/filrak/vue-offline#vueofflinemixin)
-    - [VueOfflinestorage](https://github.com/filrak/vue-offline#vueofflinestorage)
+    - [VueOfflineStorage](https://github.com/filrak/vue-offline#vueofflinestorage)
 
 ## Installation
 To install this package as a plugin just type:
