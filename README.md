@@ -2,10 +2,14 @@
 
 This library allows you to enhance offline capabilities of your Vue.js application. It's especially useful when you're building offline-first Progressive Web Apps or just want to inform your users that they lost internet connection. 
 
+- [Installation](https://github.com/filrak/vue-offline#installation)
+- [Capabilities]()
+    - [VueOfflineMixin]()
+    - [VueOfflinestorage]()
 ## Installation
 To install this package as a plugin just type:
 ````
-npm install vue-offline --save`
+npm install vue-offline --save
 ````
 
 and add it into your application with
