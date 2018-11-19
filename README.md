@@ -9,6 +9,8 @@ This library allows you to enhance offline capabilities of your Vue.js applicati
     - [VueOfflineMixin](#vueofflinemixin)
     - [VueOfflineStorage](#vueofflinestorage)
 
+Initially made for [Vue Storefront](https://github.com/DivanteLtd/vue-storefront)
+
 ## Installation
 To install this package as a plugin just type:
 ````
