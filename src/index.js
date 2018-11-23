@@ -51,7 +51,7 @@ export const VueOfflineStorage = {
   keys: typeof window !== undefined ? localStorage.getItem('VueOfflineStorageKeys') : null,
   set (key, value) {
     if ( typeof window !== undefined ) {
-    localStorage.setItem(key, value)
+    localStorage.setItem(key, JSON.stringify(value))
     _addKey(key)
     }
   },
