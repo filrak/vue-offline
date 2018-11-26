@@ -88,7 +88,7 @@ export default {
 }
 ````
 ### VueOfflineStorage 
- Offline storage that uses [local storage][https://developer.mozilla.org/pl/docs/Web/API/Window/localStorage] to persist data for offline usage and caching. It's a perfect choice for offline-first PWA. You can use it as a fallback for failed network requests or a local cache. 
+ Offline storage that uses [local storage](https://developer.mozilla.org/pl/docs/Web/API/Window/localStorage) to persist data for offline usage and caching. It's a perfect choice for offline-first PWA. You can use it as a fallback for failed network requests or a local cache. 
 
 The storage object has following properties: 
 - `set(key, value)` - puts (or updates if already exists) `value` into storage under key `key`.
