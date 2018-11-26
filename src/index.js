@@ -42,7 +42,7 @@ export const VueOfflineMixin = {
 
 function _addKey (newKey) {
   let keys = JSON.parse(localStorage.getItem('VueOfflineStorageKeys')) || []
-  keys.push(newKey)
+  if (!keys.includes(newKey)) keys.push(newKey)
   localStorage.setItem('VueOfflineStorageKeys', JSON.stringify(keys))
 }
 
