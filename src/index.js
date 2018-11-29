@@ -56,7 +56,7 @@ export const VueOfflineStorage = {
     }
   },
   get (key) {
-    typeof window !== undefined ? JSON.parse(localStorage.getItem(key)) : null
+    return typeof window !== undefined ? JSON.parse(localStorage.getItem(key)) : null
   }
 }
 
