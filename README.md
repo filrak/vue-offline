@@ -116,7 +116,7 @@ export default {
 ````js
 import { VueOfflineStorage } from 'vue-offline'
 
-const cachedData = VueofflineStorage.get('cached-data')
+const cachedData = VueOfflineStorage.get('cached-data')
 
 ````
 ### Additional configuration
