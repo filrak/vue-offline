@@ -12,7 +12,7 @@ export const VueOfflineMixin = {
     }
   },
   mounted () {
-    if (typeof window !== undefined) {
+    if (typeof window !== 'undefined') {
       navigator.onLine ? this.isOnline = true : this.isOffline = true
           
         const onlineHandler = () => {
@@ -48,15 +48,15 @@ function _addKey (newKey) {
 
 /** Offline storage based on localStorage. You can import it and use standalone or register a plugin */
 export const VueOfflineStorage = {
-  keys: typeof window !== undefined ? localStorage.getItem('VueOfflineStorageKeys') : null,
+  keys: typeof window !== 'undefined' ? localStorage.getItem('VueOfflineStorageKeys') : null,
   set (key, value) {
-    if ( typeof window !== undefined ) {
+    if ( typeof window !== 'undefined' ) {
     localStorage.setItem(key, JSON.stringify(value))
     _addKey(key)
     }
   },
   get (key) {
-    return typeof window !== undefined ? JSON.parse(localStorage.getItem(key)) : null
+    return typeof window !== 'undefined' ? JSON.parse(localStorage.getItem(key)) : null
   }
 }
 
