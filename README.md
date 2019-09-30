@@ -52,7 +52,7 @@ export default {
 export default {
     name: 'MyComponent',
     mounted () {
-        this.$on('offline' () => {
+        this.$on('offline', () => {
             alert('You are offline! The website will not work')
         })
     }
