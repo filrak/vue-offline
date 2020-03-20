@@ -74,7 +74,7 @@ import { VueOfflineMixin } from 'vue-offline'
 
 export default {
     name: 'MyComponent',
-    mixins: [VueofflineMixin],
+    mixins: [VueOfflineMixin],
     computed: {
         networkStatus () {
             return this.isOnline ? 'My network is fine' : 'I am offline'
