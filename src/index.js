@@ -67,10 +67,15 @@ export const VueOfflineStorage = {
  * - online, offline in-component events
  */
 export const VueOfflinePlugin = {
-  install (Vue, options = { mixin: true, storage: true }) {
+  install (Vue, options = {}) {
+    const defaultOptions = {
+      mixin: true,
+      storage: true
+    };
+
     const pluginOptions = {
-      mixin: options.mixin,
-      storage: options.storage
+      ...defaultOptions,
+      ...options
     }
     if (pluginOptions.storage) Vue.prototype.$offlineStorage = VueOfflineStorage
     if (pluginOptions.mixin) Vue.mixin(VueOfflineMixin)
