@@ -4,7 +4,7 @@
   "description": "Offline states and storage for Vue.js apps and Progressive Web Apps",
   "main": "lib/vue-offline.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
+    "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev"
   },
   "repository": {
